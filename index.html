@@ -8,30 +8,40 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
 
-      <link href="themetoggle/toggle.css" rel="stylesheet">
+      <link href="/switch.css" rel="stylesheet">
 
       <style>
           @import "nord.css";
 
+          :root {
+            --bg-color: white;
+            --font-color: var(--nord0);
+            --title-color: var(--nord6);
+            --card-color: var(--nord6);
+            --footer-color: var(--nord6);
+          }
+
+          [data-theme="dark"] {
+            --bg-color: var(--nord3);
+            --font-color: var(--nord4);
+            --title-color: var(--nord0);
+            --card-color: var(--nord0);
+            --footer-color: var(--nord0);
+          }
+
           body {
             font-family: 'Cantarell', sans-serif;
-            font-size: x-large;
+            font-size: large;
             height: 100vh;
+            
+            background-color: var(--bg-color);
+            color: var(--font-color);
           }
 
           .titlebar {
             height: 3em;
             width: 100%;
             background-color: var(--nord4);
-          }
-
-          footer {
-            height: 3em;
-            background-color: var(--nord4);
-          }
-
-          .photo {
-            width: 50vw;
           }
 
           a {
@@ -53,41 +63,13 @@
             background-color: var(--nord2);
           }
 
-          .contact {
-            background-color: var(--nord4);
-          }
-
           .card {
-            background-color: var(--nord6);
+            background-color: var(--card-color);
           }
 
-
-          .form-check-input:focus {
-            outline: none !important;
-            box-shadow: none !important;
-          }
-          
-          .form-switch .form-check-input {
-            background-size: 30px 30px !important;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ebcb8b'/%3e%3c/svg%3e") !important;
-            background-position: 2px center !important;
-          }
-
-          .form-switch .form-check-input:focus {
-            background-size: 30px 30px !important;
-            border-color: rgba(0, 0, 0, 0.25);
-            outline: 0;
-            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23ebcb8b'/%3e%3c/svg%3e") !important;
-            background-position: 2px center !important;
-          }
-
-          .form-switch .form-check-input:checked {
-            background-size: 30px 30px !important;
-            background-color: var(--nord1);
-            border: none;
-            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23FFFFFF'/%3e%3c/svg%3e") !important;
-            background-position: right 2px center !important;
+          footer {
+            height: 3em;
+            background-color: var(--footer-color);
           }
       </style>
     </head>
@@ -101,9 +83,8 @@
                 <a><span class="logo-subs">(</span>*tw<span class="logo-subs">)</span></a>
               </div>
     
-              <!-- [TODO] night mode button -->
               <div class="form-check form-switch">
-                <input class="form-check-input h-75" type="checkbox" style="width:75px;">
+                <input class="form-check-input h-75" type="checkbox" style="width:60px;">
                 <label></label>
               </div>
             </div>
@@ -156,7 +137,7 @@
                 <div class="card">
                   <div class="card-body">
                     <span class="card-title">Digital Queue System</span>
-                    <span class="badge bg-secondary ms-2">proposal</span>
+                    <span class="badge bg-secondary ms-1">proposal</span>
                     <h6 class="card-subtitle text-muted mt-1">2022</h6>
                     <hr>
                     <p class="card-text">design and build a web application to manage store's queue. support offline and online notifications via display, POS printer, speaker, and Whatsapp API</p>
@@ -173,7 +154,7 @@
                 <div class="card">
                   <div class="card-body">
                     <span class="card-title">Queue Interface</span>
-                    <span class="badge bg-success ms-2">live</span>
+                    <span class="badge bg-success ms-1">live</span>
                     <h6 class="card-subtitle text-muted mt-1">2021</h6>
                     <hr>
                     <p class="card-text">design and build a web application to serve store's queue information, accessible from every visitor's phone</p>
@@ -189,7 +170,7 @@
                 <div class="card">
                   <div class="card-body">
                     <span class="card-title">Automated Photobooth</span>
-                    <span class="badge bg-success ms-2">live</span>
+                    <span class="badge bg-success ms-1">live</span>
                     <h6 class="card-subtitle text-muted mt-1">2017</h6>
                     <hr>
                     <p class="card-text">design and build a system of multiple DLSR cameras and lamps, controlled by a desktop application to take picture simultaneously based on face recognition</p>
@@ -206,7 +187,7 @@
 
           <!-- toolbar -->
           <h4 class="mt-5">contact me on</h4>
-          <div class="card contact">
+          <div class="card">
             <div class="d-flex flex-row align-items-center justify-content-center m-3">
               <div class="p-2">
                 <a href="https://www.linkedin.com/in/tommy-wijaya-c/">
@@ -223,7 +204,7 @@
         </div>
       </div>
 
-      <script type="text/javascript" src="themetoggle/toggle.js"></script>
+      <script type="text/javascript" src="/switch.js"></script>
     </body>
 
     <footer class="mt-5">
