@@ -27,14 +27,19 @@
         }
 
         [data-theme="dark"] {
-
-
           --bg-color: var(--nord3);
           --font-color: var(--nord4);
           --title-color: var(--nord0);
           --card-color: var(--nord0);
           --header-color: var(--nord0);
           --footer-color: var(--nord0);
+        }
+
+        .photo {
+          width: 200px; 
+          height: auto; 
+          border-radius: 50%; 
+          border: 1px solid var(--font-color);
         }
 
         body {
@@ -106,11 +111,11 @@
         <!-- body -->
         <div class="d-flex flex-column align-items-center justify-content-center">
           <div class="doc">
-            <div class="d-lg-flex mx-3 my-5">
+            <div class="d-lg-flex mx-3 my-5 align-items-center justify-content-center">
               <div class="px-5 py-2">
-                <img src="photo.png" style="width: 200px; height: auto;">
+                <img src="photo.png" class="mx-auto d-block photo">
               </div>
-              <div>
+              <div class="text-center">
                 <p>hello, I'm <b>Tommy Wijaya</b></p>
                 <p>software engineer specialized in backend, but the kind that still prefer graphical interface over CLI</p>
                 <p>based in Jakarta, Indonesia 🇮🇩</p>
