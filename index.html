@@ -11,75 +11,87 @@
       <link href="/switch.css" rel="stylesheet">
 
       <style>
-          @import "nord.css";
+        @import "nord.css";
 
-          :root {
-            --bg-color: white;
-            --font-color: var(--nord0);
-            --title-color: var(--nord6);
-            --card-color: var(--nord6);
-            --footer-color: var(--nord6);
-          }
+        :root {
+          --logo-color: var(--nord10);
+          --logo-sub-color: var(--nord3);
+          --logo-hover-color: var(--nord4);
 
-          [data-theme="dark"] {
-            --bg-color: var(--nord3);
-            --font-color: var(--nord4);
-            --title-color: var(--nord0);
-            --card-color: var(--nord0);
-            --footer-color: var(--nord0);
-          }
+          --bg-color: white;
+          --font-color: var(--nord0);
+          --title-color: var(--nord6);
+          --card-color: var(--nord6);
+          --header-color: var(--nord6);
+          --footer-color: var(--nord6);
+        }
 
-          body {
-            font-family: 'Cantarell', sans-serif;
-            font-size: large;
-            height: 100vh;
-            
-            background-color: var(--bg-color);
-            color: var(--font-color);
-          }
+        [data-theme="dark"] {
 
-          .titlebar {
-            height: 3em;
-            width: 100%;
-            background-color: var(--nord4);
-          }
 
-          a {
-            color: inherit;
-          }
-          .logo {
-            text-decoration: none;
-            font-family: 'Roboto Mono', monospace;
-            color: var(--nord10);
-          }
-          .logo-subs {
-            display: inline-block;
-            vertical-align: middle;
-            color: var(--nord3);
-          }
-          .logo:hover{
-            cursor: pointer;
-            border-radius: 5px;
-            background-color: var(--nord2);
-          }
+          --bg-color: var(--nord3);
+          --font-color: var(--nord4);
+          --title-color: var(--nord0);
+          --card-color: var(--nord0);
+          --header-color: var(--nord0);
+          --footer-color: var(--nord0);
+        }
 
-          .card {
-            background-color: var(--card-color);
-          }
+        body {
+          font-family: 'Cantarell', sans-serif;
+          font-size: large;
+          height: 100vh;
+          
+          background-color: var(--bg-color);
+          color: var(--font-color);
+        }
 
-          footer {
-            height: 3em;
-            background-color: var(--footer-color);
-          }
+        /* document page width */
+        .doc {
+          width: 75%;
+        }
+
+        .titlebar {
+          height: 3em;
+          width: 100%;
+          background-color: var(--header-color);
+        }
+
+        a {
+          color: inherit;
+        }
+        .logo {
+          text-decoration: none;
+          font-family: 'Roboto Mono', monospace;
+          color: var(--logo-color);
+        }
+        .logo-subs {
+          display: inline-block;
+          color: var(--logo-sub-color);
+        }
+        .logo:hover{
+          cursor: pointer;
+          border-radius: 5px;
+          background-color: var(--logo-hover-color);
+        }
+
+        .card {
+          background-color: var(--card-color);
+        }
+
+        footer {
+          height: 3em;
+          background-color: var(--footer-color);
+        }
       </style>
     </head>
     <body>
       <div class="frame">
         <!-- titlebar -->
         <div class="titlebar d-flex align-items-center justify-content-center">
-          <div class="w-50">
+          <div class="doc">
             <div class="d-flex justify-content-end">
-              <div class="logo p-2">
+              <div class="logo mx-2 p-2">
                 <a><span class="logo-subs">(</span>*tw<span class="logo-subs">)</span></a>
               </div>
     
@@ -93,7 +105,7 @@
 
         <!-- body -->
         <div class="d-flex flex-column align-items-center justify-content-center">
-          <div class="w-50">
+          <div class="doc">
             <div class="d-lg-flex mx-3 my-5">
               <div class="px-5 py-2">
                 <img src="photo.png" style="width: 200px; height: auto;">
