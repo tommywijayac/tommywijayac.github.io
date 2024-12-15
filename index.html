@@ -1,5 +1,7 @@
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
       <link rel="preconnect" href="https://fonts.gstatic.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Cantarell&display=swap" rel="stylesheet">
@@ -44,9 +46,6 @@
 
         body {
           font-family: 'Cantarell', sans-serif;
-          font-size: large;
-          height: 100vh;
-          
           background-color: var(--bg-color);
           color: var(--font-color);
         }
@@ -112,12 +111,10 @@
         <div class="d-flex flex-column align-items-center justify-content-center">
           <div class="doc">
             <div class="d-lg-flex mx-3 my-5 align-items-center justify-content-center">
-              <div class="px-5 py-2">
-                <img src="photo.png" class="mx-auto d-block photo">
-              </div>
-              <div class="text-center">
+              <img src="photo.png" class="mx-auto d-block photo">
+              <div class="text-center mt-3">
                 <p>hello, I'm <b>Tommy Wijaya</b></p>
-                <p>software engineer specialized in backend, but the kind that still prefer graphical interface over CLI</p>
+                <p>a software engineer specialized in backend, but the kind that still prefer graphical interface over CLI</p>
                 <p>based in Jakarta, Indonesia 🇮🇩</p>
                 </p>
               </div>
@@ -154,14 +151,14 @@
                 <div class="card">
                   <div class="card-body">
                     <span class="card-title">Digital Queue System</span>
-                    <span class="badge bg-secondary ms-1">proposal</span>
+                    <span class="badge bg-success ms-1">live</span>
                     <h6 class="card-subtitle text-muted mt-1">2022</h6>
                     <hr>
-                    <p class="card-text">design and build a web application to manage store's queue. support offline and online notifications via display, POS printer, speaker, and Whatsapp API</p>
+                    <p class="card-text">design and build a cross platform web application to manage store queue. support offline notifications via display and speaker.</p>
                     <p>
                       frontend: HTML, CSS, JS with Bootstrap 4<br/>
-                      backend: redis, golang, nginx<br/>
-                      hardware: POS printer
+                      backend: redis, golang, c#, java<br/>
+                      hardware: POS printer, screen
                     </p>
                   </div>
                 </div>
@@ -174,7 +171,7 @@
                     <span class="badge bg-success ms-1">live</span>
                     <h6 class="card-subtitle text-muted mt-1">2021</h6>
                     <hr>
-                    <p class="card-text">design and build a web application to serve store's queue information, accessible from every visitor's phone</p>
+                    <p class="card-text">design and build a web application to serve store queue information, accessible from every visitor's phone</p>
                     <p>
                       frontend: HTML, CSS, JS with Bootstrap 4<br/>
                       backend: MySQL, golang, nginx
